@@ -243,6 +243,7 @@ input[type="radio"] {
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-gap: var(--sp-m);
+  grid-row-gap: var(--sp-l);
   align-items: center;
   grid-template-areas: 
     "user-image date-area"
