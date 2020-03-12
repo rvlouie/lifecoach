@@ -3,6 +3,7 @@
       <title>Life Coach</title>
       <link rel="stylesheet" type="text/css" href="student-side.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
     <div class="wrapper flex flex-column flex-align-center">
@@ -11,17 +12,28 @@
       </div>
       <div class="content">
         <div class="content__user-image"></div>
+
+        <!-- Header -->
+
         <div class="content__date-header">
+          <div class="content__date-header__top-nav flex flex-align-center flex-justify-space-between">
+            <h5 class="bodyMainBold content__date-header__coach">Coach: Ashley Baldwin</h5>
+            <input class="search">
+              <svg class="search__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.2499 15.0583L20.7552 18.5633C21.0822 18.8938 21.0822 19.4281 20.7517 19.7586L19.7567 20.7535C19.4297 21.0839 18.8953 21.0839 18.5648 20.7535L15.0595 17.2485C14.9013 17.0903 14.8134 16.8758 14.8134 16.6508V16.0778C13.5723 17.0481 12.0112 17.6246 10.313 17.6246C6.27329 17.6246 3 14.3517 3 10.3123C3 6.27297 6.27329 3 10.313 3C14.3528 3 17.6261 6.27297 17.6261 10.3123C17.6261 12.0103 17.0495 13.5712 16.0791 14.8122H16.6522C16.8772 14.8122 17.0917 14.9001 17.2499 15.0583ZM5.81277 10.3123C5.81277 12.8013 7.82737 14.8122 10.3131 14.8122C12.8023 14.8122 14.8134 12.7978 14.8134 10.3123C14.8134 7.82332 12.7988 5.81243 10.3131 5.81243C7.82386 5.81243 5.81277 7.82684 5.81277 10.3123Z" fill="#9294a0"/>
+              </svg>
+            </input>
+          </div>
           <h1 class="heading1">Today, 3/21/20</h1>
-          <h3 class="heading4 content__subheader">Hey Rick, let's make some progress today.</h3>
+          <h3 class="bodyMainBold content__subheader">Hey Rick, let's make some progress today.</h3>
           <div class="content__actions flex flex-align-center">
-            <button class="icon-button bodySmallSemiBold flex flex-align-center">
+            <button class="icon-button icon-button--upload bodySmallSemiBold flex flex-align-center">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.04ZM14 13V17H10V13H7L12 8L17 13H14Z" fill="currentColor"/>
               </svg>                  
               Upload a file
             </button>
-            <button class="icon-button bodySmallSemiBold flex flex-align-center">
+            <button class="icon-button icon-button--write bodySmallSemiBold flex flex-align-center">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3688 3.29L20.7088 5.63C21.0988 6.02 21.0988 6.65 20.7088 7.04L18.8788 8.87L15.1288 5.12L16.9588 3.29C17.1488 3.1 17.3988 3 17.6588 3C17.9188 3 18.1688 3.09 18.3688 3.29ZM2.99878 17.25V21H6.74878L17.8088 9.94L14.0588 6.19L2.99878 17.25ZM5.91878 19H4.99878V18.08L14.0588 9.02L14.9788 9.94L5.91878 19Z" fill="currentColor"/>
               </svg>
@@ -29,12 +41,141 @@
             </button>
           </div>
         </div>
+
+        <!-- Timeline -->
+
         <div class="content__timeline">
-          <h5 class="heading5 content__timeline__link">Upcoming</h5>
-          <h5 class="heading5 content__timeline__link">Today</h5>
-          <h5 class="heading5 content__timeline__link">Completed</h5>
+          <button class="heading5 content__timeline__nav-item content__timeline__nav-item--upcoming">Upcoming</button>
+
+          <!-- Upcoming timeline -->
+
+          <div class="content__timeline__wrapper flex flex-column flex-justify-space-between content__timeline__wrapper--upcoming">
+              <a href="#" class="content__timeline__node flex flex-align-center">
+                  <div class="emoji__small">📋</div>
+                  <div class="content__timeline__node__copy">
+                    <p class="bodySmallSemiBold">Reflection writing</p>
+                    <p class="bodySmall content__timeline__node__copy__description">Due March 28, 2020</p>
+                  </div>
+                </a>
+            <a href="#" class="content__timeline__node flex flex-align-center content__timeline__node--more-padding">
+              <div class="emoji__small">📚</div>
+              <div class="content__timeline__node__copy">
+                <p class="bodySmallSemiBold">Meditation reading</p>
+                <p class="bodySmall content__timeline__node__copy__description">Due March 28, 2020</p>
+              </div>
+            </a>
+            <a href="#" class="content__timeline__node flex flex-align-center">
+                <div class="emoji__small">📺</div>
+                <div class="content__timeline__node__copy">
+                  <p class="bodySmallSemiBold">Zoom call with your coach</p>
+                  <p class="bodySmall content__timeline__node__copy__description">March 24, 2020 @ 12:30pm</p>
+                </div>
+              </a>
+          </div>
+          <button class="heading5 content__timeline__nav-item content__timeline__nav-item--active">Today</button>
+          <button class="heading5 content__timeline__nav-item content__timeline__nav-item--past">Completed</button> 
+
+          <!-- Completed timeline -->
+
+          <div class="content__timeline__wrapper flex flex-column flex-justify-space-between content__timeline__wrapper--past ">
+              <a href="#" class="content__timeline__node flex flex-align-center content__timeline__node--more-padding">
+                  <div class="emoji__small">📚</div>
+                  <div class="content__timeline__node__copy">
+                    <p class="bodySmallSemiBold">Reflection writing</p>
+                    <p class="bodySmall content__timeline__node__copy__description">Completed March 16, 2020</p>
+                  </div>
+                </a>
+            <a href="#" class="content__timeline__node flex flex-align-center content__timeline__node--more-padding">
+              <div class="emoji__small">📋</div>
+              <div class="content__timeline__node__copy">
+                <p class="bodySmallSemiBold">Meditation writing</p>
+                <p class="bodySmall content__timeline__node__copy__description">Completed March 11, 2020</p>
+              </div>
+            </a>
+            <a href="#" class="content__timeline__node flex flex-align-center">
+                <div class="emoji__small">📺</div>
+                <div class="content__timeline__node__copy">
+                  <p class="bodySmallSemiBold">Zoom call with your coach</p>
+                  <p class="bodySmall content__timeline__node__copy__description">Completed March 8, 2020 @ 12:30pm</p>
+                </div>
+              </a>
+          </div>
+
         </div>
+
+        <!-- Content -->
+
         <div class="content__content-area">
+
+          <!-- Upload UI -->
+
+          <div class="content__add content__add__upload-ui">
+            <div class="flex flex-justify-space-between">
+              <h6 class="heading6 mb-s content__add__header">Upload a document</h6>
+              <svg class="content__add__close content__add__close__upload-ui" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0823 12L18.7951 7.28732C19.0677 7.01477 19.0677 6.57246 18.7951 6.29946L17.7001 5.20442C17.4275 4.93186 16.9852 4.93186 16.7122 5.20442L11.9998 9.91753L7.28696 5.20486C7.01439 4.9323 6.57207 4.9323 6.29907 5.20486L5.20443 6.29946C4.93186 6.57202 4.93186 7.01433 5.20443 7.28732L9.91725 12L5.20443 16.7127C4.93186 16.9852 4.93186 17.4275 5.20443 17.7005L6.2995 18.7956C6.57207 19.0681 7.01439 19.0681 7.28739 18.7956L11.9998 14.0825L16.7126 18.7951C16.9852 19.0677 17.4275 19.0677 17.7005 18.7951L18.7956 17.7001C19.0681 17.4275 19.0681 16.9852 18.7956 16.7122L14.0823 12Z" />
+              </svg> 
+            </div>
+            <form>
+              <div class="privacy-input__item flex flex-align-center mb-s">
+                <input type="radio" id="shared" name="privacy" value="shared">
+                <label class="ml-s" for="shared">
+                  <h5 class="bodyMainBold">Shared</h5>
+                  <p class="bodySmall privacy-input__item__description">Shared posts will be visible to your coach, they will be notified when you submit.</p>
+                </label>
+              </div>
+              <div class="privacy-input__item flex flex-align-center">
+                <input type="radio" id="private" name="privacy" value="private">
+                <label class="ml-s" for="private">
+                  <h5 class="bodyMainBold">Private</h5>
+                  <p class="bodySmall privacy-input__item__description">Private posts are just for you, they won't be visible to your coach.</p>
+                </label>
+              </div>
+            </form>
+            <div class="content__uplaod-ui flex flex-align-center flex-justify-center">
+              <svg class="content__uplaod-ui__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.04ZM14 13V17H10V13H7L12 8L17 13H14Z" fill="currentColor"/>
+              </svg> 
+              <div class="content__uplaod-ui__copy">
+                <h5 class="bodyLeadBold">Drag and drop or click here to upload documents.</h5>
+                <p class="bodySmall content__uplaod-ui__copy__description">You can upload any document up to 2GB large in any format.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Write something UI -->
+
+          <div class="content__add content__add__writing">
+            <div class="flex flex-justify-space-between">
+              <h6 class="heading6 mb-s content__add__header">Write something</h6>
+              <svg class="content__add__close content__add__close__writing" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0823 12L18.7951 7.28732C19.0677 7.01477 19.0677 6.57246 18.7951 6.29946L17.7001 5.20442C17.4275 4.93186 16.9852 4.93186 16.7122 5.20442L11.9998 9.91753L7.28696 5.20486C7.01439 4.9323 6.57207 4.9323 6.29907 5.20486L5.20443 6.29946C4.93186 6.57202 4.93186 7.01433 5.20443 7.28732L9.91725 12L5.20443 16.7127C4.93186 16.9852 4.93186 17.4275 5.20443 17.7005L6.2995 18.7956C6.57207 19.0681 7.01439 19.0681 7.28739 18.7956L11.9998 14.0825L16.7126 18.7951C16.9852 19.0677 17.4275 19.0677 17.7005 18.7951L18.7956 17.7001C19.0681 17.4275 19.0681 16.9852 18.7956 16.7122L14.0823 12Z" />
+              </svg> 
+            </div>
+            <form>
+              <div class="privacy-input__item flex flex-align-center mb-s">
+                <input type="radio" id="shared" name="privacy" value="shared">
+                <label class="ml-s" for="shared">
+                  <h5 class="bodyMainBold">Shared</h5>
+                  <p class="bodySmall privacy-input__item__description">Shared posts will be visible to your coach, they will be notified when you submit.</p>
+                </label>
+              </div>
+              <div class="privacy-input__item flex flex-align-center">
+                <input type="radio" id="private" name="privacy" value="private">
+                <label class="ml-s" for="private">
+                  <h5 class="bodyMainBold">Private</h5>
+                  <p class="bodySmall privacy-input__item__description">Private posts are just for you, they won't be visible to your coach.</p>
+                </label>
+              </div>
+            </form>
+            <div class="content__add__textarea-ui--header flex">
+              <div class="content__add__textarea-ui--header__item"><span class="bodyLeadBold">B</span></div>
+              <div class="content__add__textarea-ui--header__item"><span class="bodyLeadBold emphasis"><em>I</em></span></div>
+              <div class="content__add__textarea-ui--header__item"><span class="bodyLeadBold underline">U</span></div>
+            </div>
+            <textarea class="bodyMain content__add__textarea-ui"></textarea>
+          </div>
+
           <div class="content__upcoming">
             <p class="heading5 content__upcoming__milestone-copy">You have 3 upcoming milestones</p>
             <ul class="content__upcoming__list">
@@ -62,6 +203,8 @@
             </ul>
           </div>
         </div>
+
+
       </div>
     </div>
   </body>
