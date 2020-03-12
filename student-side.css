@@ -1,0 +1,299 @@
+:root {
+
+  font-size: 16px;
+
+  --money: #1ea69a;
+  --caribbean: #52dccb;
+  --squid-ink: #212338;
+  --midnight: #292c44;
+  --dark-and-stormy: #343854;
+  --plumette: #4a4e6d;
+  --slate: #6b6d7c;
+  --nebulous: #9294a0;
+  --concrete: #b9b9c0;
+  --magic: #cbcbd0;
+  --grey-area: #e2e2e9;
+  --subtle: #efeff5;
+  --fog: #f5f5f8;
+  --cloud: #fdfdfe;
+  --clinical: #fff;
+
+  --fs0: 1rem;
+  --lh0: 1.5rem;
+  --fs1: 1.125rem;
+  --lh1: 1.688rem;
+  --fs3: 1.424rem;
+  --lh3: 2.136rem;
+  --fs5: 1.802rem;
+  --lh5: 2.703rem;
+  --fs6: 2.027rem;
+  --lh6: 3.041rem;
+  --fs9: 2.887rem;
+  --lh9: 4.33rem;
+  --fs-1: 0.889rem;
+  --lh-1: 1.333rem;
+  --fs-2: 0.79rem;
+  --lh-2: 1.185rem;
+  --fs-3: 0.702rem;
+  --lh-3: 1.053rem;
+
+
+  --sp-xxs: 4px;
+  --sp-xs: 8px;
+  --sp-s: 16px;
+  --sp-m: 24px;
+  --sp-l: 32px;
+  --sp-xl: 40px;
+  --sp-xxl: 48px;
+  --sp-xxxl: 56px;
+  --sp-xxxxl: 64px;  
+
+}        
+
+body {
+  margin: 0;
+  padding: 0 var(--sp-m);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  margin: 0;
+}
+
+button {
+  outline: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: all o.2s ease;
+}
+
+/* Font styles */
+
+.heading1 {
+  font-size: var(--fs9);
+  line-height: var(--lh9);
+  font-weight: 600;
+}
+.heading2 {
+  font-size: var(--fs6);
+  line-height: var(--lh6);
+  font-weight: 600;
+}
+.heading3 {
+  font-size: var(--fs5);
+  line-height: var(--lh5);
+  font-weight: 600;
+}
+.heading4 {
+  font-size: var(--fs3);
+  line-height: var(--lh3);
+  font-weight: 600;
+}
+.heading5 {
+  font-size: var(--fs1);
+  line-height: var(--lh1);
+  font-weight: 600;
+}
+.heading6 {
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.pageHeading {
+  font-size: var(--fs0);
+  line-height: var(--lh0);
+  font-weight: 600;
+}
+.bodyLead {
+  font-size: var(--fs0);
+  line-height: var(--lh0);
+  font-weight: 400;
+}
+.bodyLeadBold {
+  font-size: var(--fs0);
+  line-height: var(--lh0);
+  font-weight: 600;
+}
+.bodyMain {
+  font-size: var(--fs-1);
+  line-height: var(--lh-1);
+  font-weight: 400;
+}
+.bodyMainBold {
+  font-size: var(--fs-1);
+  line-height: var(--lh-1);
+  font-weight: 600;
+}
+.bodySmall {
+  font-size: var(--fs-2);
+  line-height: var(--lh-2);
+  font-weight: 400;
+}
+.bodySmallSemiBold {
+  font-size: var(--fs-2);
+  line-height: var(--lh-2);
+  font-weight: 600;
+}
+
+/* utilities */
+
+.mb-m {
+  margin-bottom: 24px;
+}
+
+.mb-xl {
+  margin-bottom: 64px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.justify-self-end{
+  justify-self: end;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-align-start {
+  align-items: flex-start;
+}
+
+/* Main styles */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  padding: var(--sp-xxs) var(--sp-m);
+  background-color: var(--squid-ink);
+}
+
+.header__image {
+  padding-left: var(--sp-s);
+}
+
+.content {
+  padding-top: calc(58px + var(--sp-xxxxl));
+  width: 760px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-gap: var(--sp-m);
+  align-items: center;
+  grid-template-areas: 
+    "user-image date-area"
+    "timeline content-area"
+}
+
+.content__user-image {
+  grid-area: user-image;
+  background-image: url('me_dog.png');
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  height: 150px;
+}
+
+.content__timeline {
+  grid-area: timeline;
+  align-self: start;
+  justify-self: center;
+}
+
+.content__date-header {
+  grid-area: date-area;
+}
+
+.content__content-area {
+  grid-area: content-area;
+}
+
+.icon-button {
+  color: var(--concrete);
+  background-color: transparent;
+  margin-right: var(--sp-m);
+  transition: color 0.2s ease;
+}
+
+.icon-button:hover {
+  color: var(--slate);
+}
+
+.icon-button svg {
+  margin-right: var(--sp-xs);
+}
+
+.content__subheader {
+  color: var(--midnight);
+  font-weight: 400;
+}
+
+.content__actions {
+  margin-top: var(--sp-s  );
+}
+
+.content__upcoming {
+  margin-top: var(--sp-m);
+}
+
+.content__upcoming__milestone-copy {
+  font-weight: 400;
+}
+
+.content__upcoming__list {
+  overflow: hidden;
+  border-radius: 20px;
+  max-width: 450px;
+  border: 1px solid var(--subtle);
+  padding: 0;
+}
+
+.content__upcoming__list-link {
+  background-color: var(--cloud);
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  padding: var(--sp-m) var(--sp-m);
+}
+
+.content__upcoming__list-link:hover {
+  background-color: var(--fog);
+}
+
+.emoji {
+  font-size: 30px;
+}
+
+.content__upcoming__list-link__copy-wrapper {
+  margin-left: var(--sp-s);
+}
+
+.content__upcoming__list-link__copy {
+  color: var(--slate);
+}
