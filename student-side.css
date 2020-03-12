@@ -403,6 +403,11 @@ input[type="radio"] {
   margin-bottom: var(--sp-s);
 }
 
+.content__timeline__node--completed {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+}
+
 .content__timeline__node--more-padding {
   margin-bottom: var(--sp-l);
 }
@@ -434,6 +439,14 @@ input[type="radio"] {
 
 .content__timeline__node__copy__description {
   color: var(--slate);
+}
+
+.completed-check {
+  background-color: var(--money);
+  fill: var(--clinical);
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
 }
 
 /* Upload */
