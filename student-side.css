@@ -4,6 +4,7 @@
 
   --money: #1ea69a;
   --caribbean: #52dccb;
+  --royal: #204bbf;
   --squid-ink: #212338;
   --midnight: #292c44;
   --dark-and-stormy: #343854;
@@ -177,6 +178,10 @@ input[type="radio"] {
   margin-bottom: 24px;
 }
 
+.mb-l {
+  margin-bottom: var(--sp-l);
+}
+
 .mb-xl {
   margin-bottom: 64px;
 }
@@ -213,6 +218,11 @@ input[type="radio"] {
   align-items: center;
 }
 
+.flex-justify-center {
+  justify-content : center;
+}
+
+
 .flex-align-start {
   align-items: flex-start;
 }
@@ -228,12 +238,99 @@ input[type="radio"] {
   top: 0;
   width: 100%;
   height: 50px;
+  z-index: 100;
   padding: var(--sp-xxs) var(--sp-m);
   background-color: var(--squid-ink);
 }
 
 .header__image {
   padding-left: var(--sp-s);
+}
+
+.header__main-heading {
+  position: relative;
+}
+
+.header__calendar-button {
+  fill: var(--concrete);
+  cursor: pointer;
+  transition: fill var(--transition-timing);
+}
+
+.header__calendar__today {
+  position: relative;
+}
+
+.header__calendar__today::after {
+  content: "Today";
+  position: absolute;
+  bottom: -20px;
+  left: 19px; 
+  font-size: var(--fs-2);
+  color: var(--grey-area);
+}
+
+.header__calendar__active-date {
+  color: var(--royal);
+}
+
+.header__calendar-button:hover {
+  fill: var(--slate);
+}
+
+.header__calendar-ui {
+  position: absolute;
+  top: 73px; 
+  box-shadow: 5px 5px 15px -3px var(--concrete);
+  width: 100%;
+  border: 1px solid var(--concrete);
+  border-radius: 5px; 
+  background-color: var(--clinical);
+  padding: var(--sp-s);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-timing);
+}
+
+.header__calendar-ui__close {
+  position: absolute;
+  right: 0;
+  fill: var(--concrete);
+  cursor: pointer;
+  transition: fill var(--transition-timing);
+}
+
+.header__calendar-ui__close:hover {
+  fill: var(--slate);
+}
+
+.header__calendar-ui--open {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.header__calendar-ui__header {
+  text-align: center;
+  position: relative;
+  padding: var(--sp-xs); 
+}
+
+.header__calendar-ui__dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.header__calendar-ui__dates span, .header__calendar-ui__dates a {
+  background-color: transparent;
+  font-size: var(--fs3);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color var(--transition-timing);
+}
+
+.header__calendar-ui__dates span:hover, .header__calendar-ui__dates a:hover {
+  background-color: var(--fog);
 }
 
 .content {
@@ -369,6 +466,15 @@ input[type="radio"] {
   background: transparent;
   padding: var(--sp-xs) var(--sp-s);
   border-radius: var(--sp-m);
+  margin-bottom: var(--sp-xs);
+}
+
+.content__timeline__nav-item--link {
+  color: var(--nebulous);
+}
+
+.content__timeline__nav-item:hover  .content__timeline__nav-item--link {
+  color: var(--squid-ink); 
 }
 
 .content__timeline__nav-item:hover {
@@ -379,10 +485,11 @@ input[type="radio"] {
 .content__timeline__nav-item.content__timeline__nav-item--active {
   color: var(--squid-ink);
   cursor: initial;
+  background-color: var(--fog); 
 }
 
 .content__timeline__nav-item.content__timeline__nav-item--active:hover {
-  background-color: transparent; 
+  background-color: var(--fog); 
 }
 
 .content__timeline__wrapper {
@@ -424,7 +531,7 @@ input[type="radio"] {
   transition: all var(--transition-timing);
 }
 
-.content__timeline__node:hover::before {
+.content__timeline__node:hover::before, .content__timeline__node.active::before {
   transform: scale(1.5);
   background-color: var(--squid-ink);
 } 
@@ -435,6 +542,10 @@ input[type="radio"] {
 }
 
 .content__timeline__node:hover .content__timeline__node__copy {
+  color: var(--squid-ink);
+}
+
+.content__timeline__node.active .content__timeline__node__copy {
   color: var(--squid-ink);
 }
 
@@ -551,4 +662,63 @@ input[type="radio"] {
 
 .underline {
   text-decoration: underline;
+}
+
+/* Assignment */
+
+.assignment__header {
+
+}
+
+.assignment__pdf-embed {
+  height: 50vh;
+}
+
+.assignment__description {
+  color: var(--slate);
+}
+
+.zoom-button {
+  background-color: var(--concrete);
+  cursor: not-allowed;
+  padding: var(--sp-s) var(--sp-m);
+  margin: var(--sp-l) 0;
+  color: var(--clinical); 
+  border-radius: 5px;
+}
+
+.zoom-button img {
+  width: 50px;
+}
+
+.comment__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.comment__container {
+  max-width: 450px;
+  padding: var(--sp-s);
+  border-radius: 10px;
+} 
+
+.comment-teacher .comment__container {
+  border: 1px solid var(--grey-area);
+  background-color: var(--clinical);
+}
+
+.comment-student .comment__container {
+  background-color: var(--royal);
+  color: var(--clinical);
+}
+
+.writing__paragraph {
+  margin-bottom: var(--sp-s);
+}
+
+.assignment__zoom-call {
+  width: 100%;
+  height: 290px;
+  margin: var(--sp-l) 0;
 }

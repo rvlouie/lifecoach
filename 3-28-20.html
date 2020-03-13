@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="wrapper flex flex-column flex-align-center">
-      <div class="header flex flex-align-center">
+      <div class="header flex flex-align-center flex-justify-center">
         <img class="header__image" src="lifecoachlogo.svg" />
       </div>
       <div class="content">
@@ -28,7 +28,7 @@
             </input>
           </div>
           <h1 class="header__main-heading heading1 flex flex-align-center">
-            Today, 3/21/20
+            3/28/20
             <svg class="ml-s header__calendar-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M18.625 4.5H16.75V2.46875C16.75 2.21094 16.5391 2 16.2812 2H14.7187C14.4609 2 14.25 2.21094 14.25 2.46875V4.5H9.25V2.46875C9.25 2.21094 9.03906 2 8.78125 2H7.21875C6.96094 2 6.75 2.21094 6.75 2.46875V4.5H4.875C3.83984 4.5 3 5.33984 3 6.375V20.125C3 21.1602 3.83984 22 4.875 22H18.625C19.6602 22 20.5 21.1602 20.5 20.125V6.375C20.5 5.33984 19.6602 4.5 18.625 4.5ZM18.3906 20.125H5.10937C4.98047 20.125 4.875 20.0195 4.875 19.8906V8.25H18.625V19.8906C18.625 20.0195 18.5195 20.125 18.3906 20.125Z"  />
             </svg>
@@ -97,20 +97,20 @@
         <!-- Timeline -->
 
         <div class="content__timeline">
-          <button class="heading5 content__timeline__nav-item content__timeline__nav-item--active">Today</button>
+          <button class="heading5 content__timeline__nav-item"><a class="content__timeline__nav-item--link" href="today.html">Today</a></button>
           <button class="heading5 content__timeline__nav-item content__timeline__nav-item--upcoming">Upcoming</button>
 
           <!-- Upcoming timeline -->
 
-          <div class="content__timeline__wrapper flex flex-column flex-justify-space-between content__timeline__wrapper--upcoming">
-            <a href="3-28-20.html" class="content__timeline__node flex flex-align-center">
+          <div class="content__timeline__wrapper flex flex-column flex-justify-space-between content__timeline__wrapper--upcoming content__timeline__wrapper--open">
+            <a href="3-28-20.html" class="content__timeline__node active flex flex-align-center">
               <div class="emoji__small">📋</div>
               <div class="content__timeline__node__copy">
                 <p class="bodySmallSemiBold">Reflection writing</p>
                 <p class="bodySmall content__timeline__node__copy__description">Due March 28, 2020</p>
               </div>
             </a>
-            <a href="3-28-20.html" class="content__timeline__node flex flex-align-center content__timeline__node--more-padding">
+            <a href="3-28-20.html" class="content__timeline__node active flex flex-align-center content__timeline__node--more-padding">
               <div class="emoji__small">📚</div>
               <div class="content__timeline__node__copy">
                 <p class="bodySmallSemiBold">Meditation reading</p>
@@ -144,7 +144,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.23347 18.7447L3.26876 13.079C2.91041 12.7386 2.91041 12.1867 3.26876 11.8462L4.56648 10.6135C4.92483 10.2731 5.50589 10.2731 5.86424 10.6135L9.88235 14.4302L18.4887 6.25529C18.8471 5.9149 19.4281 5.9149 19.7865 6.25529L21.0842 7.48799C21.4425 7.82838 21.4425 8.38028 21.0842 8.7207L10.5312 18.7447C10.1728 19.0851 9.59182 19.0851 9.23347 18.7447V18.7447Z" />
               </svg>
               <div class="content__timeline__node__copy">
-                <p class="bodySmallSemiBold">Meditation writing</p>
+                <p class="bodySmallSemiBold">Meditation reading</p>
                 <p class="bodySmall content__timeline__node__copy__description">Completed March 11, 2020</p>
               </div>
             </a>
@@ -165,38 +165,34 @@
 
         <div class="content__content-area">
 
-          <div class="content__upcoming mb-l">
-            <p class="heading5 content__upcoming__milestone-copy">You have 3 upcoming milestones</p>
-            <ul class="content__upcoming__list">
-              <li class="content__upcoming__list-link">
-                <a class="flex flex-align-center" href="3-28-20.html">
-                  <div class="emoji">📚</div>
-                  <div class="content__upcoming__list-link__copy-wrapper">
-                    <h5 class="heading5">Meditation reading</h5>
-                    <p class="bodyMain content__upcoming__list-link__copy">Due March 28, 2020</p>
-                  </div>
-                </a>
-              </li>
-              <li class="content__upcoming__list-link">
-                <a class="flex flex-align-center" href="3-28-20.html">
-                  <div class="emoji">📋</div>
-                  <div class="content__upcoming__list-link__copy-wrapper">
-                    <h5 class="heading5">Reflection writing</h5>
-                    <p class="bodyMain content__upcoming__list-link__copy">Due March 28, 2020</p>
-                  </div>
-                </a>
-              </li>
-              <li class="content__upcoming__list-link flex flex-align-center">
-                <a class="flex flex-align-center" href="3-24-20.html">
-                  <div class="emoji">📺</div>
-                  <div class="content__upcoming__list-link__copy-wrapper">
-                    <h5 class="heading5">Zoom call with your coach</h5>
-                    <p class="bodyMain content__upcoming__list-link__copy">March 24, 2020 @ 12:30PM</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <!-- Assignments -->
+
+          <section class="assignment mb-l">
+            <h6 class="heading6 mb-s content__add__header">Assignment</h6>
+            <div class="assignment__header mb-m">
+              <h4 class="heading5">📚 Meditation reading</h4>
+              <p class="bodyMain assignment__description">Take an hour to read through the exercise and practice the guided meditation. Be through and mindful throughout, concentrating on your breathing and body state. Always remember to breathe. 💆‍♀️</p>
+            </div>
+            <div class="assignment__pdf-embed">
+              <embed src="body-scan.pdf" type="application/pdf" width="100%" height="100%">
+            </div>
+          </section>
+
+          <section class="assignment mb-l">
+            <h6 class="heading6 mb-s content__add__header">Assignment</h6>
+            <div class="assignment__header mb-m">
+              <h4 class="heading5">📋 Reflection writing</h4>
+              <p class="bodyMain assignment__description">After finishing the medtation exercise above, reflect on your state of mind and how you felt afterward. Better? Worse?</p>
+            </div>
+            <div class="assignment__writing__ui">
+              <div class="content__add__textarea-ui--header flex">
+                <div class="content__add__textarea-ui--header__item"><span class="bodyLeadBold">B</span></div>
+                <div class="content__add__textarea-ui--header__item"><span class="bodyLeadBold emphasis"><em>I</em></span></div>
+                <div class="content__add__textarea-ui--header__item"><span class="bodyLeadBold underline">U</span></div>
+              </div>
+              <textarea class="bodyMain content__add__textarea-ui"></textarea>
+            </div>
+          </section>
 
           <!-- Upload UI -->
 
@@ -266,7 +262,7 @@
             </div>
             <textarea class="bodyMain content__add__textarea-ui"></textarea>
           </div>
-    
+
         </div>
 
 

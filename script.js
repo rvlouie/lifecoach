@@ -17,4 +17,10 @@ $(document).ready(function() {
     $(".content__add__close__writing").click(function() {
         $(".content__add__writing").removeClass("content__add__writing--open")
     });
+    $(".header__calendar-button").click(function() {
+        $(".header__calendar-ui").toggleClass("header__calendar-ui--open")
+    })
+    $(".header__calendar-ui__close").click(function() {
+        $(".header__calendar-ui").removeClass("header__calendar-ui--open")
+    })
 });
