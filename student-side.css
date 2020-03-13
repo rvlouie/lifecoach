@@ -249,6 +249,7 @@ input[type="radio"] {
 
 .header__main-heading {
   position: relative;
+  margin-top: var(--sp-s);
 }
 
 .header__calendar-button {
@@ -264,7 +265,7 @@ input[type="radio"] {
 .header__calendar__today::after {
   content: "Today";
   position: absolute;
-  bottom: -20px;
+  bottom: -12px;
   left: 19px; 
   font-size: var(--fs-2);
   color: var(--grey-area);
@@ -326,6 +327,7 @@ input[type="radio"] {
   font-size: var(--fs3);
   cursor: pointer;
   border-radius: 5px;
+  padding-bottom: 8px;
   transition: background-color var(--transition-timing);
 }
 
