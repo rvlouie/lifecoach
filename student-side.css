@@ -336,6 +336,7 @@ input[type="radio"] {
 .content {
   padding-top: calc(58px + var(--sp-xxxxl));
   width: 760px;
+  padding-bottom: var(--sp-xl);
   margin: auto;
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -715,6 +716,18 @@ input[type="radio"] {
 
 .writing__paragraph {
   margin-bottom: var(--sp-s);
+}
+
+.writing__submit__button {
+  background-color: var(--money);
+  transition: background-color var(--transition-timing);
+  padding: var(--sp-xs) var(--sp-s);
+  border-radius: var(--sp-m);
+  color: var(--clinical);
+}
+
+.writing__submit__button:hover {
+  background-color: var(--caribbean);
 }
 
 .assignment__zoom-call {
