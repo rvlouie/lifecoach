@@ -248,7 +248,6 @@ input[type="radio"] {
 
 .panel {
   position: fixed;
-  overflow-y: auto;
   z-index: 1000;
   right: 0;
   top: var(--header-height);
@@ -277,7 +276,7 @@ input[type="radio"] {
   cursor: pointer;
   position: absolute;
   top: calc(var(--sp-xs) + var(--sp-xs));
-  left: calc(var(--sp-xs) + var(--sp-xs)) ;
+  left: -22px;
   opacity: 0;
   padding: 2px;
   background-color: var(--cloud);
@@ -305,7 +304,7 @@ input[type="radio"] {
 }
 
 .panel__hide {
-  right: -280px;
+  right: -320px;
 }
 
 .panel__coach {
