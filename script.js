@@ -55,4 +55,8 @@ $(document).ready(function() {
         $(".panel").addClass("panel__hide")
     });
 
+    $(".panel__toggle--open").click(function() {
+        $(".panel").removeClass("panel__hide")
+    });
+
 });

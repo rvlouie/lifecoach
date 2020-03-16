@@ -13,6 +13,143 @@
       <div class="header flex flex-align-center flex-justify-center">
         <img class="header__image" src="lifecoachlogo.svg" />
       </div>
+
+      <svg class="panel__toggle panel__toggle--open" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18H22V16L9 16V18ZM9 13L22 13V11L9 11V13ZM9 6V8L22 8V6L9 6Z" fill="currentColor"/>
+        <path d="M6 8L2 12L6 16L6 8Z" fill="currentColor"/>
+      </svg>
+        
+
+      <div class="panel">
+        
+        <svg class="panel__toggle" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 6L2 6L2 8L15 8L15 6ZM15 11L2 11L2 13L15 13L15 11ZM15 18L15 16L2 16L2 18L15 18Z" fill="currentColor"/>
+          <path d="M18 16L22 12L18 8L18 16Z" fill="currentColor"/>
+        </svg>    
+
+        <div class="panel__coach flex flex-align-center">
+          <img src="Ashley-Baldwin.jpg" class="comment__image" />
+          <div class="flex flex-column ml-s">
+            <h6 class="heading6 panel__section__header">Coach</h6>
+            <h5>Ashley Baldwin</h5>
+          </div>
+        </div>
+        <div class="panel__goals">
+          <h6 class="heading6 panel__section__header panel__section__header--goals mb-s flex flex-align-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z" fill="currentColor"/>
+            </svg>
+            Goals
+          </h6>
+          <ol class="panel__list panel__list--goals">
+            <li class="bodyMain panel__goal__list__item">Reduce weekly panic attacks from 3 to 0</li>
+            <li class="bodyMain panel__goal__list__item">Achieve meditation flow state</li>
+            <li class="bodyMain panel__goal__list__item panel__goal__list__item--complete flex flex-align-center">
+              <svg class="completed-check" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.23347 18.7447L3.26876 13.079C2.91041 12.7386 2.91041 12.1867 3.26876 11.8462L4.56648 10.6135C4.92483 10.2731 5.50589 10.2731 5.86424 10.6135L9.88235 14.4302L18.4887 6.25529C18.8471 5.9149 19.4281 5.9149 19.7865 6.25529L21.0842 7.48799C21.4425 7.82838 21.4425 8.38028 21.0842 8.7207L10.5312 18.7447C10.1728 19.0851 9.59182 19.0851 9.23347 18.7447V18.7447Z" />
+              </svg>
+              <span class="ml-xs">Meditate every day</span>
+              </li>
+          </ol>
+        </div>
+        <div class="panel__milestones">
+          <h6 class="heading6 panel__section__header panel__section__header--milestones mb-s flex flex-align-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z" fill="currentColor"/>
+            </svg>
+            Upcoming milestones
+          </h6>
+          <div class="content__upcoming panel__list--milestones-wrapper">
+            <ul class="panel__list panel__list--milestones">
+              <li class="panel__list__item">
+                <a class="flex flex-align-center" href="3-24-20.html">
+                  <div class="panel__emoji">📺</div>
+                  <div class="content__upcoming__list-link__copy-wrapper">
+                    <h5 class="bodyMainBold">Zoom call with your coach</h5>
+                    <p class="bodySmall content__upcoming__list-link__copy">March 24, 2020 @ 12:30PM</p>
+                  </div>
+                </a>
+              </li>
+              <li class="panel__list__item">
+                <a class="flex flex-align-center" href="3-28-20.html">
+                  <div class="panel__emoji">📚</div>
+                  <div class="content__upcoming__list-link__copy-wrapper">
+                    <h5 class="bodyMainBold">Meditation reading</h5>
+                    <p class="bodySmall content__upcoming__list-link__copy">Due March 28, 2020</p>
+                  </div>
+                </a>
+              </li>
+              <li class="panel__list__item">
+                <a class="flex flex-align-center" href="3-28-20.html">
+                  <div class="panel__emoji">📋</div>
+                  <div class="content__upcoming__list-link__copy-wrapper">
+                    <h5 class="bodyMainBold">Reflection writing</h5>
+                    <p class="bodySmall content__upcoming__list-link__copy">Due March 28, 2020</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel__chat">
+          <h6 class="heading6 panel__section__header mb-s">Chat</h6>
+          <div class="chat__container">
+            <div class="chat__chats">
+              <div class="chat__chat chat__chat--coach">
+                <div class="bodySmall chat__chat__text">
+                  <a class="bodySmallSemiBold chat__assignment-link" href="3-8-20.html">Mar. 8 📺 Zoom call with your coach</a>
+                  This was a great chat. Let's keep up the progress. Onward!
+                </div>
+                <img class="chat__chat__image" src="Ashley-Baldwin.jpg" />
+              </div>
+              <div class="chat__chat chat__chat--student">
+                <img class="chat__chat__image" src="me_dog.png" />
+                <div class="bodySmall chat__chat__text">
+                  <a class="bodySmallSemiBold chat__assignment-link" href="3-8-20.html">Mar. 8 📺 Zoom call with your coach</a>
+                  Yeah, thanks for taking the time. I'm going to get into what we talked about today. Excted for the next one!
+                </div>
+              </div>
+              <div class="chat__chat chat__chat--student">
+                <img class="chat__chat__image" src="me_dog.png" />
+                <div class="bodySmall chat__chat__text">
+                  <a class="bodySmallSemiBold chat__assignment-link" href="3-11-20.html">Mar. 11 📚 Meditation reading</a>
+                  This was a really great reading. I think I'm starting to understand how this all works.
+                </div>
+              </div>
+              <div class="chat__chat chat__chat--coach">
+                <div class="bodySmall chat__chat__text">
+                  <a class="bodySmallSemiBold chat__assignment-link" href="3-11-20.html">Mar. 11 📚 Meditation reading</a>
+                  Good to hear. Remember to use this in practice every day. It'll get earier to work into your life if you do this day over day.
+                </div>
+                <img class="chat__chat__image" src="Ashley-Baldwin.jpg" />
+              </div>
+              <div class="chat__chat chat__chat--coach">
+                <div class="bodySmall chat__chat__text">
+                  <a class="bodySmallSemiBold chat__assignment-link" href="3-16-20.html">Mar. 16 📋 Reflection writing</a>
+                  Ugh! Tough week. But I like how you used the techniques we talked about to get through it.
+                </div>
+                <img class="chat__chat__image" src="Ashley-Baldwin.jpg" />
+              </div>
+              <div class="chat__chat chat__chat--student">
+                <img class="chat__chat__image" src="me_dog.png" />
+                <div class="bodySmall chat__chat__text">
+                  <a class="bodySmallSemiBold chat__assignment-link" href="3-24-20.html">Mar. 24 (upcoming) 📺 Zoom call with your coach</a>
+                  I think I'd like to focus on the Vipassana method on the 24th. I've been having trouble sitting still and Anapana hasn't been helping. I'm very jittery this week and I need to calm down.
+                </div>
+              </div>
+              <div class="chat__chat chat__chat--coach">
+                <div class="bodySmall chat__chat__text">
+                  <a class="bodySmallSemiBold chat__assignment-link" href="3-24-20.html">Mar. 24 (upcoming) 📺 Zoom call with your coach</a>
+                  OK great! Let's talk about this when we get together on Zoom.
+                </div>
+                <img class="chat__chat__image" src="Ashley-Baldwin.jpg" />
+              </div>
+            </div>
+            <textarea class="bodySmall chat__textarea"></textarea>
+          </div>
+        </div>
+      </div>
+
       <div class="content">
         <div class="content__user-image"></div>
 
