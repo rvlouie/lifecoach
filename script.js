@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+    // Pop over UIs
+
     $(".content__timeline__nav-item--upcoming").click(function() {
         $(".content__timeline__wrapper--upcoming").toggleClass("content__timeline__wrapper--open")
     });
@@ -23,4 +26,33 @@ $(document).ready(function() {
     $(".header__calendar-ui__close").click(function() {
         $(".header__calendar-ui").removeClass("header__calendar-ui--open")
     })
+
+    // Panel
+
+    $(".panel__section__header--goals").click(function() {
+        $(".panel__list--goals").toggleClass("closed")
+    });
+    $(".panel__section__header--milestones").click(function() {
+        $(".panel__list--milestones-wrapper").toggleClass("closed")
+    });
+
+    $(".panel__section__header--goals").click(function() {
+        $(".panel__section__header--goals").toggleClass("mb-s")
+    });
+    $(".panel__section__header--milestones").click(function() {
+        $(".panel__section__header--milestones").toggleClass("mb-s")
+    });
+
+    $(".panel__section__header--goals").click(function() {
+        $(".panel__section__header--goals svg").toggleClass("panel__icon")
+    });
+    $(".panel__section__header--milestones").click(function() {
+        $(".panel__section__header--milestones svg").toggleClass("panel__icon")
+    });
+
+
+    $(".panel__toggle").click(function() {
+        $(".panel").addClass("panel__hide")
+    });
+
 });

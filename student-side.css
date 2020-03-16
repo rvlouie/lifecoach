@@ -51,6 +51,8 @@
 
   --transition-timing: 0.2s ease;
 
+  --header-height: 58px;
+
 }        
 
 body {
@@ -174,6 +176,10 @@ input[type="radio"] {
   margin-left: var(--sp-s);
 }
 
+.ml-xs {
+  margin-left: var(--sp-xs);
+}
+
 .mb-m {
   margin-bottom: 24px;
 }
@@ -214,6 +220,10 @@ input[type="radio"] {
   flex-direction: column;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-align-center {
   align-items: center;
 }
@@ -232,6 +242,211 @@ input[type="radio"] {
 }
 
 /* Main styles */
+
+/* Content panels */
+
+.panel {
+  position: fixed;
+  overflow-y: auto;
+  z-index: 1000;
+  right: 0;
+  top: var(--header-height);
+  background-color: var(--fog);
+  height: calc(100vh - var(--header-height));
+  padding: var(--sp-s);
+  width: 250px;
+  border-left: 1px solid var(--subtle);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px auto auto 1fr;
+  grid-row-gap: var(--sp-s);
+  grid-template-areas:
+    "coach"
+    "goals"
+    "milestones"
+    "chat";
+  transition: right var(--transition-timing);
+}
+
+.panel:hover .panel__toggle {
+  opacity: 1;
+}
+
+.panel__toggle {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  padding: var(--sp-xs);
+  background-color: var(--clinical);
+  z-index: 1001;
+  border-radius: 100%;
+  border: 1px solid var(--fog);
+  box-shadow: 0px 0px 8px 0px var(--plumette);
+  transition: opacity var(--transition-timing);
+}
+
+.panel__hide {
+  right: -280px;
+}
+
+.panel__coach {
+  grid-area: coach;
+}
+
+.panel__goals {
+  grid-area: goals;
+}
+
+.panel__milestones {
+  grid-area: milestones;
+}
+
+.panel__chat {
+  grid-area: chat;
+}
+
+.panel__section__header {
+  color: var(--slate);
+  cursor: pointer; 
+  transition: all var(--transition-timing);
+}
+
+.panel__section__header svg {
+  margin-left: -4px;
+}
+
+.panel__section__header:hover {
+  color: var(--midnight);
+}
+
+.panel__goal__list__item {
+  margin-bottom: var(--sp-xs);
+} 
+
+.panel__goal__list__item:last-child {
+  margin-bottom: 0;
+}
+
+.panel__goal__list__item--complete {
+  color: var(--slate);
+  list-style-type: none;
+  margin-left: -16px;
+}
+
+.panel__goal__list__item--complete .completed-check {
+  width: 14px;
+  height: 14px;
+}
+
+.panel__list {
+  border-radius: 5px;
+  padding: var(--sp-s) var(--sp-s) var(--sp-s) calc(var(--sp-s) + var(--sp-s)); 
+  border: 1px solid var(--grey-area);
+  background-color: var(--clinical);
+  margin-bottom: 0;
+}
+
+.panel__emoji {
+  font-size: 20px;
+}
+
+.panel-list--goals, .panel__list--milestones-wrapper {
+  display: block;
+}
+
+.panel__icon {
+  transform: rotate(-90deg);
+}
+
+.panel__list--milestones {
+  padding: var(--sp-s);
+  list-style-type: none;
+}
+
+.panel__list--milestones-wrapper.closed, .panel__list--goals.closed {
+  display: none;
+} 
+
+.panel__list__item {
+  margin-bottom: var(--sp-xs);
+}
+
+.panel__list__item:last-child {
+  margin-bottom: 0;
+}
+
+.panel__list__item:hover h5 {
+  text-decoration: underline;
+}
+
+
+.chat__container {
+  display: grid;
+  grid-gap: var(--sp-s);
+  height: calc(100% - 76px);
+  grid-template-rows: 1fr 60px;
+  position: relative;
+}
+
+.chat__chats {
+  border: 1px solid var(--grey-area);
+  background-color: var(--clinical);
+  padding: var(--sp-s);
+  border-radius: 5px;
+  position: absolute;
+  overflow-y: auto;
+  max-height: calc(100% - 98px);
+}
+
+.chat__textarea {
+  resize: none;
+  overflow-y: auto;
+  border-radius: 5px;
+  padding: var(--sp-xs);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.chat__chat {
+  display: grid;
+  grid-gap: var(--sp-xs);
+  margin-bottom: var(--sp-s);
+}
+
+.chat__chat--student {
+  grid-template-columns: 20px 1fr;
+}
+
+.chat__chat--coach {
+  grid-template-columns: 1fr 20px;
+}
+
+.chat__chat:last-child {
+  margin-bottom: 0;
+}
+
+.chat__chat__image {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+}
+
+.chat__assignment-link {
+  color: var(--slate);
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 180px;
+}
+
+.chat__assignment-link:hover {
+  text-decoration: underline;
+}
+
+/* Header  */
 
 .header {
   position: fixed;
@@ -266,7 +481,7 @@ input[type="radio"] {
   content: "Today";
   position: absolute;
   bottom: -12px;
-  left: 19px; 
+  left: 2px;
   font-size: var(--fs-2);
   color: var(--grey-area);
 }
@@ -282,8 +497,8 @@ input[type="radio"] {
 .header__calendar-ui {
   position: absolute;
   top: 73px; 
+  width: 300px;
   box-shadow: 5px 5px 15px -3px var(--concrete);
-  width: 100%;
   border: 1px solid var(--concrete);
   border-radius: 5px; 
   background-color: var(--clinical);
@@ -324,7 +539,7 @@ input[type="radio"] {
 
 .header__calendar-ui__dates span, .header__calendar-ui__dates a {
   background-color: transparent;
-  font-size: var(--fs3);
+  font-size: var(--fs1);
   cursor: pointer;
   border-radius: 5px;
   padding-bottom: 8px;
@@ -352,6 +567,7 @@ input[type="radio"] {
 
 .content__date-header__top-nav {
   position: relative;
+  width: fit-content;
 }
 
 .search {
@@ -367,6 +583,7 @@ input[type="radio"] {
   right: var(--sp-xs);
   width: 16px;
   height: 16px;
+  margin-top: calc(var(--sp-xs) - 2px); 
 }
 
 .content__user-image {
@@ -726,6 +943,7 @@ input[type="radio"] {
   padding: var(--sp-xs) var(--sp-s);
   border-radius: var(--sp-m);
   color: var(--clinical);
+  margin-bottom: var(--sp-l);
 }
 
 .writing__submit__button:hover {
