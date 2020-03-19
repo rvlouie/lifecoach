@@ -181,6 +181,10 @@ input[type="radio"] {
   margin-left: var(--sp-xs);
 }
 
+.mb-xs {
+  margin-bottom: var(--sp-xs);
+}
+
 .mb-m {
   margin-bottom: 24px;
 }
@@ -258,12 +262,11 @@ input[type="radio"] {
   border-left: 1px solid var(--subtle);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 40px auto auto 1fr;
+  grid-template-rows: 40px auto 1fr;
   grid-row-gap: var(--sp-s);
   grid-template-areas:
     "coach"
     "goals"
-    "milestones"
     "chat";
   transition: right var(--transition-timing);
 }
@@ -483,6 +486,7 @@ input[type="radio"] {
 .header__main-heading {
   position: relative;
   margin-top: var(--sp-s);
+  color: var(--slate); 
 }
 
 .header__calendar-button {
@@ -498,8 +502,8 @@ input[type="radio"] {
 .header__calendar__today::after {
   content: "Today";
   position: absolute;
-  bottom: -12px;
-  left: 2px;
+  bottom: 3px;
+  left: 8px;
   font-size: var(--fs-2);
   color: var(--grey-area);
 }
@@ -514,14 +518,13 @@ input[type="radio"] {
 
 .header__calendar-ui {
   position: absolute;
-  top: 73px; 
-  width: 300px;
   box-shadow: 5px 5px 15px -3px var(--concrete);
   border: 1px solid var(--concrete);
   border-radius: 5px; 
   background-color: var(--clinical);
   padding: var(--sp-s);
   opacity: 0;
+  z-index: 1000;
   pointer-events: none;
   transition: opacity var(--transition-timing);
 }
@@ -558,10 +561,20 @@ input[type="radio"] {
 .header__calendar-ui__dates span, .header__calendar-ui__dates a {
   background-color: transparent;
   font-size: var(--fs1);
+  font-weight: 600;
   cursor: pointer;
   border-radius: 5px;
-  padding-bottom: 8px;
+  padding: var(--sp-s);
   transition: background-color var(--transition-timing);
+}
+
+.header__calendar-ui__dates .date {
+  color: var(--slate);
+  cursor: auto;
+}
+
+.header__calendar-ui__dates .date:hover {
+  background: transparent; 
 }
 
 .header__calendar-ui__dates span:hover, .header__calendar-ui__dates a:hover {
@@ -649,7 +662,7 @@ input[type="radio"] {
 }
 
 .content__subheader {
-  color: var(--slate);
+  color: var(--squid-ink);
 }
 
 .content__actions {
@@ -705,6 +718,12 @@ input[type="radio"] {
   padding: var(--sp-xs) var(--sp-s);
   border-radius: var(--sp-m);
   margin-bottom: var(--sp-xs);
+}
+
+.content__timeline__nav-item.header__calendar-button {
+  background: var(--clinical);
+  color: var(--plumette);
+  border: 1px solid var(--concrete);
 }
 
 .content__timeline__nav-item--link {
