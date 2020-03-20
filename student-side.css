@@ -689,6 +689,18 @@ input[type="radio"] {
   color: var(--squid-ink);
 }
 
+.content__empty {
+  display: none;
+  background: var(--clinical);
+  border: 1px solid var(--concrete); 
+  padding: var(--sp-m); 
+  border-radius: 20px;
+}
+
+.content__empty.show {
+  display: block;
+}
+
 /* Upcoming */
 
 .content__upcoming {

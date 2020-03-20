@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    var showEmptySate = false;
+
     // Pop over UIs
 
     $(".content__timeline__nav-item--upcoming").click(function() {
@@ -10,6 +12,7 @@ $(document).ready(function() {
     });
 
     $(".icon-button--upload").click(function() {
+        $(".content__empty").removeClass("show");
         $(".content__add__upload-ui").addClass("content__add__upload-ui--open")
     });
     $(".content__add__close__upload-ui").click(function() {
@@ -17,6 +20,7 @@ $(document).ready(function() {
     });
 
     $(".icon-button--write").click(function() {
+        $(".content__empty").removeClass("show");
         $(".content__add__writing").addClass("content__add__writing--open")
     });
     $(".content__add__close__writing").click(function() {
@@ -24,6 +28,7 @@ $(document).ready(function() {
     });
 
     $(".icon-button--schedule").click(function() {
+        $(".content__empty").removeClass("show");
         $(".content__add__schedule-ui").addClass("content__add__schedule-ui--open")
     });
     $(".content__add__close__schedule-ui").click(function() {
@@ -38,7 +43,8 @@ $(document).ready(function() {
     })
 
     $(".content__upcoming__close").click(function() {
-        $(".content__upcoming").addClass("hide")
+        $(".content__upcoming").addClass("hide");
+        $(".content__empty").addClass("show")
     });
 
     // Panel
@@ -72,5 +78,6 @@ $(document).ready(function() {
     $(".panel__toggle--open").click(function() {
         $(".panel").removeClass("panel__hide")
     });
+
 
 });
